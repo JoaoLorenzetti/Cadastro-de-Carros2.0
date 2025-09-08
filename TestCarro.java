@@ -2,15 +2,18 @@ public class TestCarro{
 
 	public static void main(String arg[]){
 		
-		Carro c1; 
-		c1 = new Carro();
+	    Carro c1 = new Carro();
+		Leitura l1 = new Leitura();
+
 		
-		c1.setPlaca(25000);
-		c1.setModelo("camaro");
-        c1.setCor("amarelo");
-		c1.getProp().setNome("joao");
-		c1.getProp().setIdade(20);
-		c1.getProp().setCpf(148176002);
+		c1.setPlaca(Integer.parseInt(l1.entDados("Cpf: ")));
+		c1.setModelo(l1.entDados("Modelo: "));
+        c1.setCor(l1.entDados("Cor: "));
+		c1.getProp().setNome(l1.entDados("Nome: "));
+		c1.getProp().setIdade(Integer.parseInt(l1.entDados("Idade: ")));
+		c1.getProp().setCpf(Integer.parseInt(l1.entDados("Cpf: ")));
+
+
 		
 		System.out.println("\nPlaca: "+c1.getPlaca());
 		System.out.println("\nModelo: "+c1.getModelo());
@@ -21,4 +24,5 @@ public class TestCarro{
 		System.out.println("\nCPF: "+c1.getProp().getCpf());
 	}
 	
+
 }
