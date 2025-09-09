@@ -3,7 +3,7 @@ public class Carro{
     private int placa = 0;
     private String modelo ="";
     private String cor ="";
-    private Proprietario prop = new Carro();
+    private Proprietario prop = new Proprietario();
 
 
     public Proprietario getProp(){
@@ -36,5 +36,6 @@ public class Carro{
  public void setCor(String cor){
     this.cor = cor;
  }
+
 
 }
