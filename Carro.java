@@ -1,10 +1,25 @@
 public class Carro{
 
-    private int placa = 0;
-    private String modelo ="";
-    private String cor ="";
-    private Proprietario prop = new Proprietario();
+    private int placa;
+    private String modelo;
+    private String cor;
+    private Proprietario prop;
 
+    public Carro(){
+      System.out.println("\nMetodo Construtor Default\n\n");
+      placa = 0;
+      modelo ="";
+      cor ="";
+      prop = new Proprietario();
+    }
+
+    public Carro(int placa, String modelo, String Cor, Proprietario prop){
+         System.out.println("\nMetodo Construtor -> Sobrec -1\n\n");
+         this.placa = placa;
+         this.nome = nome;
+         this.cor = cor;
+         this.prop = prop;
+    }
 
     public Proprietario getProp(){
 		return prop;		
@@ -39,3 +54,4 @@ public class Carro{
 
 
 }
+
